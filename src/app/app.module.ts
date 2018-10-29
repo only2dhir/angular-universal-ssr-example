@@ -1,3 +1,5 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -21,8 +23,11 @@ const appRoutes: Routes = [
     SecondComponent,
     FirstComponent
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+ CommonModule,
+NgtUniversalModule,
+ 
+    
     BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
@@ -31,6 +36,5 @@ const appRoutes: Routes = [
     CustomMaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
